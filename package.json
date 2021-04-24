@@ -1,0 +1,38 @@
+{
+  "name": "simple-slide-toggle",
+  "version": "0.1.0",
+  "description": "It is jquery like slide `slideToggle`, `slideUp`, `slideDown`.",
+  "main": "./dist/simpleSlideToggle.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "start": "webpack serve --mode development",
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maekoya/simpleSlideToggle.git"
+  },
+  "keywords": [
+    "JavaScript",
+    "TypeScript",
+    "CSS",
+    "Slide",
+    "Accordion",
+    "jQuery"
+  ],
+  "author": "maekoya",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maekoya/simpleSlideToggle/issues"
+  },
+  "homepage": "https://github.com/maekoya/",
+  "dependencies": {},
+  "devDependencies": {
+    "ts-loader": "^8.0.17",
+    "typescript": "^4.1.5",
+    "webpack": "^5.21.2",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}

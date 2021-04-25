@@ -9,7 +9,7 @@ npm install XXXX
 
 ### and include in project:
 ```js
-import { slideUp, slideDown, slideToggle } from 'XXXX'
+import { slideUp, slideDown, slideToggle } from 'simple-slide-toggle'
 ```
 
 ## Usage

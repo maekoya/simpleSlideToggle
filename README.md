@@ -4,7 +4,7 @@ It is jquery like slide `slideToggle`, `slideUp`, `slideDown`.
 ## Installation
 ### Install via npm:
 ```shell
-npm install XXXX
+npm install simple-slide-toggle
 ```
 
 ### and include in project:

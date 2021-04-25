@@ -1,6 +1,6 @@
 import { isElement } from './utils/isEmelent'
 
-export const slideUp = (target: HTMLElement, duration = 400) => {
+export const slideUp = async (target: HTMLElement, duration = 400) => {
   if (!checkSlideMovable(target, 'slideUp')) return
 
   // initialize
@@ -22,22 +22,25 @@ export const slideUp = (target: HTMLElement, duration = 400) => {
   target.style.marginBottom = '0'
 
   // reset
-  setTimeout(() => {
-    target.style.display = 'none'
-    target.style.removeProperty('height')
-    target.style.removeProperty('box-sizing')
-    target.style.removeProperty('padding-top')
-    target.style.removeProperty('padding-bottom')
-    target.style.removeProperty('margin-top')
-    target.style.removeProperty('margin-bottom')
-    target.style.removeProperty('overflow')
-    target.style.removeProperty('transition-duration')
-    target.style.removeProperty('transition-property')
-    target.removeAttribute('data-slide-moving')
-  }, duration)
+  return new Promise(resolve => {
+    setTimeout(() => {
+      target.style.display = 'none'
+      target.style.removeProperty('height')
+      target.style.removeProperty('box-sizing')
+      target.style.removeProperty('padding-top')
+      target.style.removeProperty('padding-bottom')
+      target.style.removeProperty('margin-top')
+      target.style.removeProperty('margin-bottom')
+      target.style.removeProperty('overflow')
+      target.style.removeProperty('transition-duration')
+      target.style.removeProperty('transition-property')
+      target.removeAttribute('data-slide-moving')
+      resolve('done')
+    }, duration)
+  })
 }
 
-export const slideDown = (target: HTMLElement, duration = 400) => {
+export const slideDown = async (target: HTMLElement, duration = 400) => {
   if (!checkSlideMovable(target, 'slideDown')) return
 
   // initialize
@@ -70,17 +73,20 @@ export const slideDown = (target: HTMLElement, duration = 400) => {
   target.style.removeProperty('margin-bottom')
 
   // reset
-  setTimeout(() => {
-    target.style.removeProperty('box-sizing')
-    target.style.removeProperty('height')
-    target.style.removeProperty('overflow')
-    target.style.removeProperty('transition-duration')
-    target.style.removeProperty('transition-property')
-    target.removeAttribute('data-slide-moving')
-  }, duration)
+  return new Promise(resolve => {
+    setTimeout(() => {
+      target.style.removeProperty('box-sizing')
+      target.style.removeProperty('height')
+      target.style.removeProperty('overflow')
+      target.style.removeProperty('transition-duration')
+      target.style.removeProperty('transition-property')
+      target.removeAttribute('data-slide-moving')
+      resolve('done')
+    }, duration)
+  })
 }
 
-export const slideToggle = (target: HTMLElement, duration = 400) => {
+export const slideToggle = async (target: HTMLElement, duration = 400) => {
   return (window.getComputedStyle(target).display === 'none')
     ? slideDown(target, duration)
     : slideUp(target, duration)

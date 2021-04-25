@@ -13,8 +13,9 @@
     </div>
     
     <script>
-      document.getElementById('slide-1-trigger').addEventListener('click', function () {
-        slideToggle(document.getElementById('slide-1-target'));
+      document.getElementById('slide-1-trigger').addEventListener('click', async function () {
+        await slideToggle(document.getElementById('slide-1-target'));
+        console.log('done')
       })
     </script>
 

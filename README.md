@@ -1,5 +1,5 @@
 # SimpleSlideToggle
-It is jquery like slide `slideToggle`, `slideUp`, `slideDown`.
+It is slide like jquery `slideToggle`, `slideUp`, `slideDown`.
 
 ## Installation
 ### Install via npm:
